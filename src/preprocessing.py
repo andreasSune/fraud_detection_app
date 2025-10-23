@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-
+from sklearn.preprocessing import RobustScaler
 
 
 
@@ -142,7 +142,7 @@ def create_temporal_features(df, time_col='Time', verbose=True):
     
     return df_new, new_features
 
-def data_preprocessing(X, y, test_data=False, scaler=None):
+def data_preprocessing(X, y, temporal_features_selected ,test_data=False, scaler=None):
     """
     Prétraite les données pour la modélisation.
     
@@ -211,7 +211,7 @@ def data_preprocessing(X, y, test_data=False, scaler=None):
 
     # Garder V1-V28 + Amount + features temporelles sélectionnées
     pca_features = [f'V{i}' for i in range(1, 29)]
-    features_to_keep = pca_features + ['Amount'] + TEMPORAL_FEATURES_SELECTED
+    features_to_keep = pca_features + ['Amount'] + temporal_features_selected
     
     # Vérifier que toutes les features existent
     missing_features = [f for f in features_to_keep if f not in X_processed.columns]

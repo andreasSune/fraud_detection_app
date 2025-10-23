@@ -1,0 +1,46 @@
+================================================================================
+MODÈLES DE DÉTECTION DE FRAUDE - MÉTADONNÉES
+================================================================================
+
+Date de création : 2025-10-23 14:06:02
+
+MODÈLES SUPERVISÉS
+--------------------------------------------------------------------------------
+
+RandomForest:
+  AUPRC : 0.8050
+  AUC-ROC : 0.9643
+  Meilleurs paramètres : {'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 200}
+
+XGBoost:
+  AUPRC : 0.8304
+  AUC-ROC : 0.9575
+  Meilleurs paramètres : {'colsample_bytree': 1.0, 'learning_rate': 0.3, 'max_depth': 5, 'n_estimators': 200, 'subsample': 1.0}
+
+
+MODÈLES DE DÉTECTION D'ANOMALIES
+--------------------------------------------------------------------------------
+
+IsolationForest:
+  AUPRC : 0.5190
+  AUC-ROC : 0.9596
+
+LOF:
+  AUPRC : 0.0020
+  AUC-ROC : 0.4714
+
+
+PREPROCESSING
+--------------------------------------------------------------------------------
+Nombre de features : 34
+Features : ['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10', 'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17', 'V18', 'V19', 'V20', 'V21', 'V22', 'V23', 'V24', 'V25', 'V26', 'V27', 'V28', 'Amount', 'Time_normalized', 'Hour', 'Day', 'Hour_cos', 'Hour_sin']
+
+
+FICHIERS SAUVEGARDÉS
+--------------------------------------------------------------------------------
+  - models/random_forest.pkl
+  - models/xgboost.pkl
+  - models/isolation_forest.pkl
+  - models/lof.pkl
+  - models/scaler.pkl
+  - models/selected_features.pkl
