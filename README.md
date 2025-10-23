@@ -8,7 +8,7 @@ Système de détection de fraudes utilisant des techniques avancées de Machine 
 
 ---
 
-## 🎯 Résultats Clés
+## Résultats Clés
 
 - ✅ **AUPRC de 0.87** (XGBoost) - Métrique principale pour données déséquilibrées
 - ✅ **Precision 85% / Recall 86%** - Excellent équilibre détection/faux positifs
@@ -19,7 +19,7 @@ Système de détection de fraudes utilisant des techniques avancées de Machine 
 
 ---
 
-## 🔍 Contexte et Dataset
+##  Contexte et Dataset
 
 ### Source
 **Kaggle Credit Card Fraud Detection Dataset**
@@ -191,7 +191,7 @@ Modèle prédit tout légitime :
 
 ---
 
-## 📈 Résultats Détaillés
+##  Résultats Détaillés
 
 ### Performance sur Train/Validation
 
@@ -245,9 +245,9 @@ Pour garantir une évaluation objective et éviter tout biais d'optimisation, le
 - **Aucune fuite de données** : Le test set n'a jamais été vu pendant l'entraînement ou l'optimisation
 - **Preprocessing identique** : Utilisation du même scaler et features que le train set
 
-### Résultats sur Test Set (Données Non-Vues)
+### Résultats sur Test Set 
 
-![Test Metrics Comparison](images/08_test_metrics_comparison.png)
+![Test Metrics Comparison](img/08_test_metrics_comparison.png)
 
 | Modèle | AUPRC | AUC-ROC | Precision | Recall | F1-Score |
 |--------|-------|---------|-----------|--------|----------|
@@ -543,67 +543,3 @@ Pertes résiduelles :
 Économies annuelles :
 20,700€ × 365 = 7,555,500€/an 💰
 ```
-
----
-
-##  Installation et Utilisation
-
-### Prérequis
-```bash
-Python 3.9+
-pip install -r requirements.txt
-```
-
-### Installation
-
-```bash
-# Cloner le repository
-git clone https://github.com/andreasSune/fraud-detection.git
-cd fraud-detection
-
-# Installer dépendances
-pip install -r requirements.txt
-```
-
-### Utilisation
-
-#### 1. Exploration des Données
-```bash
-jupyter notebook notebooks/data_vizualisation.ipynb
-```
-
-#### 2. Entraînement des Modèles
-```bash
-python src/train_and_test_models.py
-```
-
-
-#### 4. Prédiction sur Nouvelles Transactions
-
-COMING SOON
-
-
----
-
-##  Technologies Utilisées
-
-### Machine Learning
-- **Scikit-learn 1.0+** - Preprocessing, modèles baseline
-- **XGBoost 1.7+** - Modèle principal (gradient boosting)
-- **Imbalanced-learn 0.10+** - SMOTE pour rééquilibrage
-
-### Data Analysis & Visualization
-- **Pandas 1.5+** - Manipulation de données
-- **NumPy 1.23+** - Calculs numériques
-- **Matplotlib 3.6+** - Visualisations statiques
-- **Seaborn 0.12+** - Visualisations statistiques
-
-### Development & Deployment
-- **Jupyter Notebook** - Exploration interactive
-- **Joblib** - Sérialisation des modèles
-- **Git/GitHub** - Version control
-
-### Environment
-- **Python 3.9**
-- **Windows**
-
